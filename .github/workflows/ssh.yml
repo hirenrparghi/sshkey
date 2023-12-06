@@ -12,12 +12,10 @@ jobs:
       env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-          mkdir -p /home/runners/.ssh
-          cd /home/runners/
-          ls
-          echo "${{ secrets.SSHKEY }}" > /home/runners/.ssh/github_actions
-          cd/home/runners/
+          mkdir -p /home/runner/.ssh
+          cd /home/runner/
           ls -la
+          # echo "${{ secrets.SSHKEY }}" > /home/runners/.ssh/github_actions
           # Replace example.com with the hostname of the machine
           # you're SSH-ing into
           # ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
