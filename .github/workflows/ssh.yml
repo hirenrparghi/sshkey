@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  publish-gpr:
+  ssh:
     runs-on: ubuntu-latest
     steps:
     - name: Add SSH key
@@ -16,7 +16,8 @@ jobs:
           cd /home/runner/
           ls
           echo "${{ secrets.SSHKEY }}" > /home/runner/.ssh/github_actions
-          cat /home/runner/.ssh/github_actions/
+          cd/home/runner/
+          ls -la
           # Replace example.com with the hostname of the machine
           # you're SSH-ing into
           # ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
