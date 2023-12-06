@@ -1,5 +1,5 @@
-name: Node.js Package
-#
+name: ssh
+
 on:
   push:
     branches: [ main ]
@@ -15,6 +15,8 @@ jobs:
           mkdir -p /home/runner/.ssh
           cd /home/runner/
           ls
+          echo "${{ secrets.SSHKEY }}" > /home/runner/.ssh/github_actions
+          cat /home/runner/.ssh/github_actions/
           # Replace example.com with the hostname of the machine
           # you're SSH-ing into
           # ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
