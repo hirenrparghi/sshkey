@@ -15,7 +15,8 @@ jobs:
           mkdir -p /home/runner/.ssh
           cd /home/runner/
           ls -la
-          echo "${{ secrets.SSHKEY }}" > /home/runner/.ssh/github_actions          
+          echo "${{ secrets.SSHKEY }}" > /home/runner/.ssh/github_actions 
+          cat /home/runner/.ssh/github_actions
           # Replace example.com with the hostname of the machine
           # you're SSH-ing into
           # ssh-keyscan example.com >> /home/runner/.ssh/known_hosts
