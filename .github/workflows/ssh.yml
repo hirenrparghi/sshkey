@@ -12,11 +12,11 @@ jobs:
       env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
-          mkdir -p /home/runner/.ssh
-          cd /home/runner/
+          mkdir -p /home/runners/.ssh
+          cd /home/runners/
           ls
-          echo "${{ secrets.SSHKEY }}" > /home/runner/.ssh/github_actions
-          cd/home/runner/
+          echo "${{ secrets.SSHKEY }}" > /home/runners/.ssh/github_actions
+          cd/home/runners/
           ls -la
           # Replace example.com with the hostname of the machine
           # you're SSH-ing into
