@@ -8,9 +8,9 @@ jobs:
   ssh:
     runs-on: ubuntu-latest
     steps:
-    - name: Add SSH key
-      env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+    # - name: Add SSH key
+    #   env:
+    #       SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       # run: |
       #     mkdir -p /home/runner/.ssh
       #     cd /home/runner/
@@ -27,9 +27,9 @@ jobs:
       #     # ssh-add /home/runner/.ssh/github_actions
       #     # cat /home/runner/.ssh/github_actions/
 
-    - name: ssh
-      run: |
-        pwd
-        cd ~
-        pwd
-        ls -la
+     - name: ssh
+       run: |
+         pwd
+         cd ~
+         pwd
+         ls -la
